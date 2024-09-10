@@ -10,6 +10,9 @@ syntax: glob
 .*
 unused/
 
+# Exception: rpm package build directory
+!.gear
+
 # Build artifacts
 *.a
 *.o
