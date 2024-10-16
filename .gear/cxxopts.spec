@@ -21,7 +21,7 @@ Minimalistic header-only parser of command line arguments for C++ programs
 %setup
 
 %build
-%cmake -DCXXOPTS_BUILD_EXAMPLES=OFF -DCXXOPTS_BUILD_TESTS=OFF
+%cmake -DCXXOPTS_BUILD_EXAMPLES=OFF -DCXXOPTS_BUILD_TESTS=ON
 %cmake_build
 
 %install
