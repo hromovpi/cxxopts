@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 1
 
 Name: cxxopts
-Version: 3.2.2
+Version: 3.2.3
 Release: alt1
 
 Summary: Command line arguments parser
@@ -36,14 +36,14 @@ rm -rf %buildroot%_datadir/cmake
 
 %files
 %_includedir/%name.hpp
-%_datadir/doc/%name/LICENSE
-%_datadir/doc/%name/README.md
-%_libdir/cmake/%name/%name-config.cmake
-%_libdir/cmake/%name/%name-config-version.cmake
-%_libdir/cmake/%name/%name-targets.cmake
+%_datadir/doc/%name/
+%_libdir/cmake/%name/
 %_datadir/pkgconfig/%{name}.pc
 
 %changelog
+* Wed Oct 16 2024 Pavel Khromov <hromovpi@altlinux.org> 3.2.3-alt1
+- Fix uninstalling package
+
 * Tue Oct 15 2024 Pavel Khromov <hromovpi@altlinux.org> 3.2.2-alt1
 - Installing CMake targets and pkgconfig
 
