@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 1
 
 Name: cxxopts
-Version: 3.2.3
+Version: 3.2.4
 Release: alt1
 
 Summary: Command line arguments parser
@@ -27,20 +27,20 @@ Minimalistic header-only parser of command line arguments for C++ programs
 %install
 %cmakeinstall_std
 
-mkdir -p %buildroot%_libdir/cmake/%name
-install -D -m644 %buildroot%_datadir/cmake/%name/* %buildroot%_libdir/cmake/%name/
 install -D -m644 include/%name.hpp %buildroot%_includedir/%name.hpp
 install -D -m644 LICENSE %buildroot%_datadir/doc/%name/LICENSE
 install -D -m644 README.md %buildroot%_datadir/doc/%name/README.md
-rm -rf %buildroot%_datadir/cmake
 
 %files
 %_includedir/%name.hpp
 %_datadir/doc/%name/
-%_libdir/cmake/%name/
+%_datadir/cmake/%name/
 %_datadir/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Oct 18 2024 Pavel Khromov <hromovpi@altlinux.org> 3.2.4-alt1
+- Changed the paths for cmake targets to architecturally independent paths
+
 * Wed Oct 16 2024 Pavel Khromov <hromovpi@altlinux.org> 3.2.3-alt1
 - Fix uninstalling package
 
